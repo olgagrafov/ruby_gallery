@@ -1,0 +1,13 @@
+<h1>Movies</h1>
+
+<% @movies.each do |movie| %>
+  <% movie.each do |key, value| %>
+    <% if key == 'fields' %>
+       <% value.each do |current_key, current_movie| %>
+        <%=current_key %> : <%=current_movie%>
+        <br />
+        <% end %>
+        <br />
+    <% end %>
+  <% end %>
+<% end %>
