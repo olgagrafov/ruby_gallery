@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# require 'yaml'
+#  airtbl = YAML.load_file('./config/air_tbl1.yml')
+# #puts airtbl
+#      airtbl.each do |air|
+#         obj = {
+#             headline:  air["fields"]["headline"],
+#             subHeadline:   air["fields"]["subHeadline"],
+#             imageUrl:   air["fields"]["imageUrl"],
+#          }
+#      NewAirTable.create(obj)
+#  end
+
+mod= NewAirTable.all
+
+puts mod
+

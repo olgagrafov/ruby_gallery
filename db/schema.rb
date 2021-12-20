@@ -10,7 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_08_133524) do
+ActiveRecord::Schema.define(version: 2021_12_20_081035) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "air_tables", force: :cascade do |t|
+    t.string "headline"
+    t.string "subHeadline"
+    t.string "imageUrl"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "air_tbls", force: :cascade do |t|
+    t.string "headline"
+    t.string "sub_headline"
+    t.string "email"
+    t.string "image_url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "airtabales", force: :cascade do |t|
+    t.string "headline"
+    t.string "sub_headline"
+    t.string "image_url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "create_air_tables", force: :cascade do |t|
+    t.string "headline"
+    t.string "subHeadline"
+    t.string "imageUrl"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "movie1s", force: :cascade do |t|
     t.string "headline"
@@ -20,9 +56,25 @@ ActiveRecord::Schema.define(version: 2021_12_08_133524) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "movies", force: :cascade do |t|
-    t.string "title"
-    t.text "body"
+  create_table "new_air_tables", force: :cascade do |t|
+    t.string "headline"
+    t.string "subHeadline"
+    t.string "imageUrl"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.string "part_number"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
